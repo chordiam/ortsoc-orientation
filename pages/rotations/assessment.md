@@ -31,7 +31,7 @@ The rotation is roughly five weeks long. The schedule may change depending on th
 | Week |	What you'll be doing |
 |---|---|
 | Week 1 | Read provided orientation material to understand security posture |
-| Week 2 | Brainstorm interview questions aligning with CIS Controls or NIST CSF and conduct client interview. |
+| Week 2 | Brainstorm interview questions aligning with cybersecurity frameworks and conduct client interview. |
 | Week 3 | Begin drafting formal assessment report based on information received from interview. |
 | Week 4 | Finalize report based on additional information gained if needed. |
 | Week 5 | Create a presentation on assessment findings and share with the client. |
