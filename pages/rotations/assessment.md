@@ -43,7 +43,6 @@ Client interview and presentation may take place outside normal ORTSOC shift hou
 The Assessment rotation focuses on administrative assessments rather than technical assessments like penetration testing. Some of the assessments that you may conduct during this rotation include:
 
 - **Maturity Assessment**: Evaluation of an organization's administrative and technical security posture compared to an accepted standard to describe the level an organization is prepared to detect, identify, and respond to cyberattacks.
-  - This is mainly what we conduct for our clients.
 - **Risk Assessment**: Identify likelihood, frequency, and impact on an organization if exposure or vulnerability is exploited.
 - **ORTSOC Onboarding Assessment**: Identify information about a client’s network and data architecture for future installation of sensors You may also gather information to form the basis for other assessments.
 
