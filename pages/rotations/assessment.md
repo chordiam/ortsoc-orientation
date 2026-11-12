@@ -1,3 +1,8 @@
+---
+title: "Cybersecurity Assessment Rotation"
+parent: Rotations
+---
+
 # Cybersecurity Assessment Rotation
 
 > Research draft for the ORTSOC Initial Orientation Website. Pending review by the Assessment Rotation Lead. No client information is to be disclosed.

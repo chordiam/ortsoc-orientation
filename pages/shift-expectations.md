@@ -1,3 +1,8 @@
+---
+title: "Shift Expectations"
+nav_order: 4
+---
+
 # Shift Expectations
 
 > Numbers below come from FY26-27 Student Manual 

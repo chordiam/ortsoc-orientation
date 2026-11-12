@@ -1,3 +1,8 @@
+---
+title: "Mission"
+nav_order: 2
+---
+
 # Mission and How ORTSOC Works
 
 ## What ORTSOC is

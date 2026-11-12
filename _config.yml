@@ -1,0 +1,20 @@
+title: ORTSOC Orientation
+description: Internal orientation guide for new ORTSOC students
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: "Back to top"
+footer_content: "ORTSOC Initial Orientation Website, CS 428 Cyber Capstone, Fall 2026. Supplements official ORTSOC training. Contains no client data."
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - add_front_matter.py
+  - vendor

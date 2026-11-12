@@ -1,3 +1,8 @@
+---
+title: "Network Security Monitoring (NSM) Rotation"
+parent: Rotations
+---
+
 # Network Security Monitoring (NSM) Rotation
 
 > Research draft for the ORTSOC Initial Orientation Website. Pending review by the NSM Rotation Lead.
