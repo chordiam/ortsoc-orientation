@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORTSOC Orientation</title>
+<style>
+  :root {
+    --bg: #ffffff; --side: #f6f7f9; --text: #1f2328; --muted: #5b6470;
+    --line: #e3e6ea; --accent: #c73e0a; --accent-soft: #fdf0ea; --code: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15171a; --side: #1c1f23; --text: #e6e8eb; --muted: #9aa3ad;
+      --line: #2c3036; --accent: #ff7a3d; --accent-soft: #2a1d16; --code: #23272c; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .layout { display: flex; min-height: 100vh; }
+  nav { width: 270px; flex-shrink: 0; background: var(--side); border-right: 1px solid var(--line);
+    padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .brand { font-weight: 700; font-size: 18px; margin: 0 8px 20px; }
+  .brand span { color: var(--accent); }
+  nav a { display: block; padding: 6px 10px; border-radius: 6px; color: var(--text);
+    text-decoration: none; font-size: 15px; }
+  nav a:hover { background: var(--line); }
+  nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .section { margin: 18px 10px 6px; font-size: 12px; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted); }
+  main { flex: 1; min-width: 0; padding: 40px 48px 80px; }
+  article { max-width: 820px; }
+  h1 { font-size: 2em; line-height: 1.25; margin: 0 0 .6em; }
+  h2 { font-size: 1.4em; margin: 1.8em 0 .5em; padding-bottom: .3em; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 1.15em; margin: 1.5em 0 .4em; }
+  a { color: var(--accent); }
+  code { background: var(--code); padding: .15em .4em; border-radius: 4px; font-size: .9em; }
+  pre { background: var(--code); padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+  pre code { background: none; padding: 0; }
+  blockquote { margin: 1em 0; padding: 10px 16px; border-left: 4px solid var(--accent);
+    background: var(--accent-soft); border-radius: 0 8px 8px 0; }
+  blockquote p { margin: .3em 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; display: block; overflow-x: auto; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--side); }
+  .empty { color: var(--muted); font-style: italic; }
+  .menu-btn { display: none; }
+  @media (max-width: 800px) {
+    .layout { display: block; }
+    nav { position: static; width: auto; height: auto; display: none; border-right: 0; border-bottom: 1px solid var(--line); }
+    nav.open { display: block; }
+    .menu-btn { display: block; width: 100%; padding: 12px 16px; border: 0; border-bottom: 1px solid var(--line);
+      background: var(--side); color: var(--text); font: inherit; font-weight: 600; text-align: left; }
+    main { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰ Menu</button>
+<div class="layout">
+  <nav><div class="brand"><span>ORTSOC</span> Orientation</div><div id="menu"></div></nav>
+  <main><article id="content">Loading…</article></main>
+</div>
+<script src="assets/marked.min.js"></script>
+<script src="assets/nav.js"></script>
+<script>
+  const HOME = "pages/home.md";
+  const menu = document.getElementById("menu");
+  const content = document.getElementById("content");
+
+  NAV.forEach(item => {
+    if (item.section) {
+      menu.insertAdjacentHTML("beforeend", `<div class="section">${item.section}</div>`);
+    } else {
+      menu.insertAdjacentHTML("beforeend", `<a href="#/${item.path}" data-path="${item.path}">${item.title}</a>`);
+    }
+  });
+
+  const slug = t => t.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+
+  function parseHash() {
+    const raw = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+    const [path, anchor] = raw.split("#");
+    return { path: path || HOME, anchor };
+  }
+
+  async function render() {
+    const { path, anchor } = parseHash();
+    document.querySelectorAll("nav a").forEach(a => a.classList.toggle("active", a.dataset.path === path));
+    document.querySelector("nav").classList.remove("open");
+    let md;
+    try {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error();
+      md = await res.text();
+    } catch {
+      content.innerHTML = `<h1>Page not found</h1><p class="empty">${path} doesn't exist yet.</p>`;
+      return;
+    }
+    md = md.replace(/^---\n[\s\S]*?\n---\n/, "");          // drop old front matter
+    md = md.replace(/^\{:.*\}\s*$/gm, "");                // drop old theme tags
+    content.innerHTML = md.trim() ? marked.parse(md) : `<p class="empty">This page is coming soon.</p>`;
+
+    content.querySelectorAll("h1, h2, h3").forEach(h => h.id = slug(h.textContent));
+    const h1 = content.querySelector("h1");
+    document.title = (h1 ? h1.textContent + " | " : "") + "ORTSOC Orientation";
+
+    // Make links between .md pages work inside the site
+    content.querySelectorAll("a[href]").forEach(a => {
+      const href = a.getAttribute("href");
+      if (/^(https?:|mailto:)/.test(href)) { a.target = "_blank"; return; }
+      if (href.startsWith("#")) { a.href = `#/${path}${href}`; return; }
+      const [file, hash] = href.split("#");
+      if (file.endsWith(".md")) {
+        const resolved = new URL(file, "http://x/" + path).pathname.slice(1);
+        a.href = `#/${resolved}${hash ? "#" + hash : ""}`;
+      }
+    });
+
+    if (anchor) document.getElementById(anchor)?.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("hashchange", render);
+  render();
+</script>
+</body>
+</html>

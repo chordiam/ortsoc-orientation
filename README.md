@@ -7,16 +7,17 @@ CS 428 Cyber Capstone, Fall 2026. Team: Kaelee Duong (PM), Manasi Chordia, Niki 
 ## Folder Layout
 
 ```
-_config.yml                 Site settings (Just the Docs theme)
-index.md                    Home page
+index.html                  The website (no setup needed)
+assets/nav.js               Sidebar menu: add new pages here
+assets/marked.min.js        Turns Markdown into the web page
 pages/
+  home.md                   Home page
   mission.md                ORTSOC mission, structure, policies
   client-services.md        Types of clients and services ORTSOC provides
   shift-expectations.md     What a typical shift looks like
   tips.md                   Tips from current and past students
   rotations/                One page per rotation (nsm.md, ...)
   tools/                    One walkthrough per tool (kibana.md, ...)
-assets/                     Images and screenshots
 ```
 
 ## Page Status
@@ -47,25 +48,21 @@ Each rotation is researched by a teammate who is in that rotation or can observe
 
 ## Adding a New Page
 
-Every page needs front matter at the very top so it shows up in the site navigation:
+1. Create the Markdown file, for example `pages/rotations/threat_intel.md`.
+2. Add one line to `assets/nav.js` so it shows in the sidebar:
+   ```js
+   { title: "Threat Intelligence", path: "pages/rotations/threat_intel.md" },
+   ```
 
-```
----
-title: Threat Intelligence
-parent: Rotations
----
-```
+## Preview the Site
 
-Use `parent: Rotations` for rotation pages and `parent: Tools` for tool pages. Or just create the file and run `python3 add_front_matter.py`, which adds it for you.
-
-## Preview the Site Locally
+From the repo folder, run:
 
 ```bash
-bundle install
-bundle exec jekyll serve
+python3 -m http.server 8000
 ```
 
-Then open http://localhost:4000.
+Then open http://localhost:8000. Press `Ctrl+C` to stop.
 
 ## How to Add Content
 
