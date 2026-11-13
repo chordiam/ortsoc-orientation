@@ -44,7 +44,7 @@ Each rotation is researched by a teammate who is in that rotation or can observe
 |---|---|---|---|
 | Network Security Monitoring (NSM) | Manasi | | Draft done |
 | Penetration Testing | Justin | | Draft done |
-| | | | |
+| Cybersecurity Assessment| Kaelee | | Draft done; editing per rotation lead feedback|
 | | | | |
 | | | | |
 
