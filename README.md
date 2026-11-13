@@ -42,7 +42,7 @@ Each rotation is researched by a teammate who is in that rotation or can observe
 | Rotation | Researched by | Backup | Status |
 |---|---|---|---|
 | Network Security Monitoring (NSM) | Manasi | | Draft done |
-| | | | |
+| Cybersecurity Assessment| Kaelee | | Draft done; editing per rotation lead feedback|
 | | | | |
 | | | | |
 
