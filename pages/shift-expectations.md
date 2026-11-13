@@ -47,3 +47,11 @@ nav_order: 4
 | Course questions | Dave Nevin, dave.nevin@oregonstate.edu |
 | Ethics questions | Any ORTSOC faculty member |
 | First shift | Report to KEC 2026 |
+
+## Related Pages
+
+- [Mission](mission.md): how ORTSOC and the rotations are organized
+
+## Sources
+
+- ORTSOC Student Manual FY26-27: Scheduling, Attendance, Absence Policy, Classroom Behavior, Guests
