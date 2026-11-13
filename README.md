@@ -25,12 +25,13 @@ pages/
 | Page | Owner | Status |
 |---|---|---|
 | rotations/nsm.md | Manasi | Draft, Rotation Lead review pending |
+| rotations/pentest.md | Justin | Draft, Rotation Lead review pending |
 | tools/kibana.md | Manasi | Draft |
 | tools/rtir.md | Manasi | Draft |
 | tools/nextcloud.md | Manasi | Draft |
-| mission.md | | |
-| client-services.md | | |
-| shift-expectations.md | | |
+| mission.md | Justin | Draft |
+| client-services.md | Justin | Draft |
+| shift-expectations.md | Justin | Draft |
 | tips.md | | |
 
 Update this table when you start or finish a page.
@@ -42,6 +43,7 @@ Each rotation is researched by a teammate who is in that rotation or can observe
 | Rotation | Researched by | Backup | Status |
 |---|---|---|---|
 | Network Security Monitoring (NSM) | Manasi | | Draft done |
+| Penetration Testing | Justin | | Draft done |
 | Cybersecurity Assessment| Kaelee | | Draft done; editing per rotation lead feedback|
 | | | | |
 | | | | |
