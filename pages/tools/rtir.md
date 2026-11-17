@@ -13,12 +13,10 @@ nav_order: 2
 
 RTIR (Request Tracker for Incident Response) is ORTSOC's ticketing system. **Every suspicious event and alert gets a ticket.** Tickets are how the next shift, your mentors, and the client know what you found, so a ticket should make sense to someone who never saw the alert.
 
-URL: `https://ticketing.ortsoc.oregonstate.edu`
 
 ## 1. Log In
 
-- **Username:** `ONID@ortsoc.oregonstate.edu`
-- **Password:** your FreeIPA password
+- Log in using your ORTSOC-specific email and password.
 
 ## 2. Check Existing Tickets First
 
