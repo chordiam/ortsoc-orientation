@@ -17,8 +17,6 @@ Nextcloud is ORTSOC's internal document hub. You use it to:
 - **Look up client information** you need for an investigation
 - **Find and follow playbooks**, the step-by-step ORTSOC procedures for handling specific kinds of events
 
-URL: `https://nextcloud.ortsoc.oregonstate.edu`
-
 ## 1. Open Collectives
 
 After you log in, click **Collectives** in the top center of the toolbar. Collectives is where client information and ORTSOC procedures are organized.
