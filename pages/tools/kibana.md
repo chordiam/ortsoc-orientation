@@ -15,8 +15,7 @@ Kibana is the web interface for searching the logs ORTSOC collects from client n
 
 ## 1. Log In and Change Your Password
 
-1. Log in with your ONID. Your starting password is in the NSM Orientation 2 module on Canvas.
-2. Change it right away: click your profile icon (top right) > **Edit profile** > **Change password**.
+1. Log in with your ONID and ORTSOC accounts password.
 
 ## 2. Find the Right Logs
 
