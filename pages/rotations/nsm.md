@@ -135,7 +135,7 @@ Common closing statuses: **false positive** (alert fired but nothing bad happene
 
 ## Writing Tickets in RTIR
 
-Every suspicious event and alert needs a ticket. Log in with `ONID@ortsoc.oregonstate.edu` and your FreeIPA password.
+Every suspicious event and alert needs a ticket. Log in to RTIR with your ORTSOC-specific email and password.
 
 **1. Set the Basics first (top right):**
 - **Queue:** the client the ticket is about
