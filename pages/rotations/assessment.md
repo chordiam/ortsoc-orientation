@@ -28,7 +28,7 @@ Using the NIST Cybersecurity Framework and the CIS Critical Security Controls as
 | **CIS Controls** | The set of cybersecurity practices and safeguards created by the Center for Internet Security. |
 | **NIST Cybersecurity Framework (NIST CSF)** | The set of cybersecurity guidelines created by the National Institute of Standards and Technology. |
 | **Nextcloud Collectives** | Where you edit group interview questions, reports, and presentations. |
-| **Slack #assessment-block** | Where you communicate with other members of your group and handoff when your shift is over. |
+| **Slack** | Where you communicate with other members of your group and handoff when your shift is over. |
 
 ## Rotation Timeline
 The rotation is roughly five weeks long. The schedule may change depending on the client engagement and your group's progress.
