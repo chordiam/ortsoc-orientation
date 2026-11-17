@@ -159,7 +159,7 @@ Example: `Attempted Information Leak-09.03.26`
 
 ## Shift Hand-off
 
-Post in **#nsm-handoffs** before you leave:
+Post in NSM's Slack channel before you leave:
 
 - **Open tickets:** ticket number, how far you got, next steps
 - **Closed tickets:** what you found and the status (false positive, benign positive, etc.)
