@@ -31,7 +31,7 @@ In the NSM rotation, you monitor, analyze, investigate, and report on security e
 | **Suricata alerts** | IDS alerts that fire on known malicious patterns. |
 | **RTIR** | Ticketing system. Every suspicious event or alert gets a ticket. |
 | **Nextcloud Collectives** | Client repo. Where you claim a client and find client info. |
-| **Slack #nsm-handoffs** | Where you post your pass down at the end of every shift. |
+| **Slack** | Where you post your pass down at the end of every shift. |
 | **AbuseIPDB, GreyNoise, VirusTotal** | Free sites for checking whether an IP or domain is known to be malicious. |
 
 ## Daily Checklist
