@@ -24,7 +24,7 @@ nav_order: 4
 
 ## Absences
 
-- Email **ortsoc-mentors@oregonstate.edu** *before* your shift. Leaving early also needs approval before the shift.
+- Excused absences require approval from mentors. Late arrivals also require approval.
 - **Excused absences can be made up. Unexcused absences cannot.** You cannot bank time before an excused absence.
 - Usually excused when communicated beforehand: job interviews, certification testing, illness or medical/family emergencies, scheduled medical appointments, and military or legal obligations.
 - Routine tardiness counts as an unexcused absence.
